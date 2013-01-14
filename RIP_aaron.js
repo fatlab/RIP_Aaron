@@ -9,9 +9,9 @@ function RIP_Aaron() {
     document.body.style.backgroundColor = '#000000';
     for (var i=0; i<els.length; i++) {
       try {
-        if (els.style.visibility != 'hidden') {
-          els.style.visibility = 'hidden';
-          els.for_aaron = true;
+        if (els[i].style.visibility != 'hidden') {
+          els[i].style.visibility = 'hidden';
+          els[i].for_aaron = true;
         }
       } catch(e) {}
     }
@@ -55,14 +55,14 @@ function RIP_Aaron() {
 
       // Nice 1 second of pure black before reverting everything
       setTimeout(function() {
-        or (var i=0; i<els.length; i++) {
-      try {
-        if (els[i].style.visibility != 'hidden') {
-          els[i].style.visibility = 'hidden';
-          els[i].for_aaron = true;
+        for (var i=0; i<els.length; i++) {
+          try {
+            if (els[i].style.visibility != 'hidden') {
+              els[i].style.visibility = 'hidden';
+              els[i].for_aaron = true;
+            }
+          } catch(e) {}
         }
-      } catch(e) {}
-    }
         document.body.style.backgroundColor = document.body.old_color;
         delete document.body.old_color;
       }, 1000);
