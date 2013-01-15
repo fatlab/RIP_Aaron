@@ -30,7 +30,7 @@ function RIP_Aaron() {
     ct.style.top = '10px';
     ct.style.right = '10px';
     ct.style.color = '#444444';
-    div.style.position = 'absolute';
+    div.style.position = 'fixed';
     div.style.top = '33%';
     div.style.left = '10%';
     div.style.right = '10%';
