@@ -49,18 +49,16 @@ function RIP_Aaron() {
     // Clear out after 5 econds
     setTimeout(function() {
       // Remove Aaron message
-      var els = document.body.getElementsByTagName("*"), m = document.getElementById('aaron_moment');
+      var m = document.getElementById('aaron_moment');
       try {m.parentNode.removeChild(m);} catch(e) {}
       clearInterval(aaron_ct);
 
       // Nice 1 second of pure black before reverting everything
       setTimeout(function() {
+        var els = document.body.getElementsByTagName("*");
         for (var i=0; i<els.length; i++) {
           try {
-            if (els[i].style.visibility != 'hidden') {
-              els[i].style.visibility = 'hidden';
-              els[i].for_aaron = true;
-            }
+            if (!!els[i].for_aaron) els[i].style.visibility = 'visible';
           } catch(e) {}
         }
         document.body.style.backgroundColor = document.body.old_color;

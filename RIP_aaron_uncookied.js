@@ -56,10 +56,7 @@ function RIP_Aaron() {
         var els = document.body.getElementsByTagName("*");
         for (var i=0; i<els.length; i++) {
           try {
-            if (els[i].style.visibility != 'hidden') {
-              els[i].style.visibility = 'hidden';
-              els[i].for_aaron = true;
-            }
+            if (!!els[i].for_aaron) els[i].style.visibility = 'visible';
           } catch(e) {}
         }
         document.body.style.backgroundColor = document.body.old_color;
