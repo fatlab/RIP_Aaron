@@ -18,7 +18,7 @@ function RIP_Aaron() {
     var h1 = document.createElement('h1'), ct = document.createElement('span'), div = document.createElement('div');
     div.id = 'aaron_moment'; div.setAttribute('id', 'aaron_moment');
     ct.id = 'aaron_ct'; ct.setAttribute('id', 'aaron_ct');
-    h1.innerHTML = 'A moment of silence for <a href="http://boingboing.net/2013/01/12/rip-aaron-swartz.html" target="_blank" style="color:#ffffff;text-decoration:underline;">Aaron Schwartz</a>.';
+    h1.innerHTML = 'A moment of silence for <a href="http://boingboing.net/2013/01/12/rip-aaron-swartz.html" target="_blank" style="color:#ffffff;text-decoration:underline;">Aaron Swartz</a>.';
     ct.innerHTML = 6;
     h1.style.color = '#ffffff';
     h1.style.fontSize = '32px;'
