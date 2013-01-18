@@ -5,7 +5,9 @@ function RIP_Aaron() {
 
     // Hide everything
     var els = document.body.getElementsByTagName("*");
-    document.body.old_color = document.body.style.backgroundColor;
+    document.body.old_body_bg = document.body.style.background;
+    document.body.old_body_bg_color = document.body.style.backgroundColor;
+    document.body.style.background = 'none';
     document.body.style.backgroundColor = '#000000';
     for (var i=0; i<els.length; i++) {
       try {
@@ -61,8 +63,10 @@ function RIP_Aaron() {
             if (!!els[i].for_aaron) els[i].style.visibility = 'visible';
           } catch(e) {}
         }
-        document.body.style.backgroundColor = document.body.old_color;
-        delete document.body.old_color;
+        document.body.style.background = document.body.old_body_bg;
+        document.body.style.backgroundColor = document.body.old_body_bg_color;
+        delete document.body.old_body_bg_color;
+        delete document.body.old_bg_color;
       }, 1000);
     }, 5000);
   }
